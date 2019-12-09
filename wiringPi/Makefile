@@ -39,7 +39,7 @@ DEBUG	= -O2
 CC	= arm-linux-gnueabihf-gcc-9
 INCLUDE	= -I.
 DEFS	= -D_GNU_SOURCE
-CFLAGS	= $(DEBUG) $(DEFS) -Wformat=2 -Wall -Wextra -Winline $(INCLUDE) -pipe -fPIC -marm -march=armv7 -mfpu=vfp
+CFLAGS	= $(DEBUG) $(DEFS) -Wformat=2 -Wall -Wextra -Winline $(INCLUDE) -pipe -fPIC -marm -mfpu=vfp #-march=armv6
 #CFLAGS	= $(DEBUG) $(DEFS) -Wformat=2 -Wall -Wextra -Wconversion -Winline $(INCLUDE) -pipe -fPIC
 
 LIBS    = -lm -lpthread -lrt -lcrypt
