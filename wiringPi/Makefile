@@ -35,11 +35,11 @@ STATIC=libwiringPi.a
 DYNAMIC=libwiringPi.so.$(VERSION)
 
 #DEBUG	= -g -O0
-DEBUG	= -O2
-CC	= arm-linux-gnueabihf-gcc-9
+DEBUG	= -O3
+CC	= arm-linux-gnueabihf-gcc
 INCLUDE	= -I.
 DEFS	= -D_GNU_SOURCE
-CFLAGS	= $(DEBUG) $(DEFS) -Wformat=2 -Wall -Wextra -Winline $(INCLUDE) -pipe -fPIC -marm -mfpu=vfp #-march=armv6
+CFLAGS	= $(DEBUG) $(DEFS) -Wformat=2 -Wall -Wextra -Winline $(INCLUDE) -pipe -fPIC -march=armv6 -marm -mfpu=vfpv2 -no-pie
 #CFLAGS	= $(DEBUG) $(DEFS) -Wformat=2 -Wall -Wextra -Wconversion -Winline $(INCLUDE) -pipe -fPIC
 
 LIBS    = -lm -lpthread -lrt -lcrypt
